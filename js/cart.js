@@ -18,42 +18,41 @@ function renderCart() {
   showCart();
 }
 
-// TODO: Remove all of the rows (tr) in the cart table (tbody)
+// Done: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  let tBodyElement = document.querySelector('tbody');
-  while (tBodyElement.firstChild) {
-    tBodyElement.removeChild(tBodyElement.lastChild);
-  }
+ document.querySelector('tbody').innerHTML ='';
 }
 
-// TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
+// WIP: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
-  // TODO: Find the table body
+  // DONE: Find the table body
   let tBodyElement = document.querySelector('tbody');
-  // TODO: Iterate over the items in the cart
-  for (let i in cart) {
-    // TODO: Create a TR
+  // DONE: Iterate over the items in the cart
+  for (let i in cart.items) {
+    // DONE: Create a TR
     let trElement = document.createElement('tr');
-    // TODO: Create a TD for the delete link, quantity,  and the item
+    // Y U NO WORK: Create a TD for the delete link, quantity,  and the item
     let tdElementDelete = document.createElement('td');
     let tdElementQty = document.createElement('td');
     let tdElementItem = document.createElement('td');
     tdElementDelete.textContent = 'x';
-    tdElementDelete.id= `delete${i}`;
+    tdElementDelete.setAttribute('class', 'removable-item');
+    tdElementDelete.id = i;
     tdElementQty.textContent = cart.items[i].quantity;
-    tdElementItem.textContent = cart.items[i].name;
-    // TODO: Add the TR to the TBODY and each of the TD's to the TR
+    tdElementItem.textContent = cart.items[i].product;
+    // DONE: Add the TR to the TBODY and each of the TD's to the TR
     trElement.appendChild(tdElementDelete);
     trElement.appendChild(tdElementQty);
     trElement.appendChild(tdElementItem);
     tBodyElement.appendChild(trElement);
+    table.appendChild(tBodyElement);
   }
 }
 
 function removeItemFromCart(event) {
 
-  // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+  // Ye? YE???: When a delete link is clicked, use cart.removeItem to remove the correct item
   cart.removeItem(event.target.name);
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table

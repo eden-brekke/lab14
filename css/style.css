@@ -1,1 +1,119 @@
 /* TODO: Make it awesome */
+body {
+  background-color: rgb(255, 235, 238);
+}
+/*header*/
+header h1 {
+  font-weight: bold;
+  color: rgb(71, 11, 71);
+  background-color: aliceblue;
+  font-size: 50px;
+  text-align: center;
+  border-width: 5px;
+  border-style: double;
+  border-color: black;
+  margin: 30px;
+}
+
+nav {
+  background-color: aquamarine;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: groove;
+  border-color: rgb(71, 11, 71);
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  font-size: 24px;
+
+}
+ul li {
+  text-decoration: none;
+  color:rgb(71, 11, 71)
+}
+
+ul li:hover {
+  background-color: rgb(166, 166, 235);
+}
+
+/* main */
+ol {
+  background-color: aliceblue;
+  border-width: 3px;
+  border-style: inset;
+  border-color: rgb(125, 125, 241);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+ol li {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 10px;
+  padding: 10px;
+  font-size: 24px;
+  color: rgb(1, 1, 98);
+}
+
+fieldset {
+  margin: 30px;
+  border-radius: 2px;
+  border-width: 5px;
+  border-color:black;
+  border-style: ridge;
+  text-align: center;
+  background-color: rgba(137, 43, 226, 0.301);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+#catalog legend {
+  font-size: 24px;
+  border-style: black;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: blueviolet;
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+
+#catalog span {
+  font-size: 24px;
+  border-style: black;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: blueviolet;
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+
+#catalog input {
+  margin: 15px;
+}
+/* cart */
+#cart-container {
+  color: green;
+  width: max-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+td tr {
+  padding: 10px;
+  margin: 10px;
+  border-style: double;
+  border-width: 2px;
+  color: blue;
+}
